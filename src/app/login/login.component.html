@@ -1,0 +1,15 @@
+<form (ngSubmit)="logar($event)">
+    <div class="login-container">
+        <div class="row">
+          <div class="col">            
+              <input type="text" class="form-control" [(ngModel)]="usuario.login" name="usuario.login" placeholder="Login" />        
+           </div>
+           <div class="col">
+            <input type="password" class="form-control" [(ngModel)]="usuario.senha" name="usuario.senha"  placeholder="Senha" />
+          </div>
+          <div class="col">
+              <button type="submit" class="btn btn-primary" title="Logar">Logar</button>
+          </div>
+        </div>
+    </div>  
+</form>

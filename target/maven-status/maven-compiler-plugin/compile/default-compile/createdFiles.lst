@@ -1,0 +1,4 @@
+com\flaprc\controller\LoginController.class
+com\flaprc\controller\FlapRCErrorController.class
+com\flaprc\FlaprcWebApplication.class
+com\flaprc\modelo\Usuario.class

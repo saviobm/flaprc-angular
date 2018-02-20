@@ -26,12 +26,8 @@ export class LoginService {
 
     /*return this.http.post(this.apiUrl + "/logar", usuario, this.options)
       .catch((error:any) => Observable.throw(error.json().error || 'Server error'));*/
-
-
-      let headers = new Headers({ 'Content-Type': 'application/json' });
-      let options = new RequestOptions({ headers: headers });
       
-      this.http.post(this.apiUrl + "/logarRetornaUsuario", usuario, options).toPromise()
+      this.http.post(this.apiUrl + "/logarRetornaUsuario", usuario, this.options).toPromise()
         .then(this.extractData).catch(this.handleErrorPromise);
 
   }

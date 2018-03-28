@@ -6,20 +6,21 @@ import { LoginComponent } from './login.component';
 import { FormsModule } from '@angular/forms';
 import { UsuarioModule } from '../usuario/usuario.module';
 import { LoginService } from './login.service';
+import { TranslateService } from '@ngx-translate/core';
 
 @NgModule({
   imports: [
     CommonModule,
     LoginRoutingModule,
     FormsModule,
-    UsuarioModule
+    UsuarioModule    
   ],
   exports: [
     LoginComponent
   ],
   declarations: [LoginComponent],
   providers: [
-    LoginService
+    LoginService        
   ]
 })
 export class LoginModule { 

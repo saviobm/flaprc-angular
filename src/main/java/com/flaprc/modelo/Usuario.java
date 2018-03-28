@@ -8,7 +8,7 @@ import java.io.Serializable;
  * 
  * @author savio.maciel
  */
-public class Usuario implements Serializable {
+public class Usuario extends FlapRCEntidade implements Serializable {
 	
 	/**
 	 * serialVersionUID

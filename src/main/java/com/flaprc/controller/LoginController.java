@@ -1,11 +1,15 @@
 package com.flaprc.controller;
 
+
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.flaprc.modelo.FlapRCEntidade;
 import com.flaprc.modelo.Usuario;
 
 @CrossOrigin(origins = "http://localhost:4200")
@@ -15,9 +19,21 @@ public class LoginController {
 	
 	
 	@RequestMapping(method = RequestMethod.POST, consumes= "application/json", path = "/logar")
-	public void logar(@RequestBody Usuario usuario) { 
+	public ResponseEntity<FlapRCEntidade> logar(@RequestBody Usuario usuario) {
 		
-		System.out.println("chegou no método logar");
+		if (usuario.getLogin().equalsIgnoreCase("saviobm")) {
+			
+			FlapRCEntidade entidade = new FlapRCEntidade();
+			entidade.setKeyMessageError("error.login");
+			
+			ResponseEntity<FlapRCEntidade> entity = new ResponseEntity<FlapRCEntidade>(entidade, HttpStatus.BAD_REQUEST);
+			
+			return entity;
+			
+			
+		}
+		
+		return null;
 		
 	}
 	

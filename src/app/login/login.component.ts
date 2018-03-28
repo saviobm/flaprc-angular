@@ -6,7 +6,7 @@ import { LoginService } from './login.service';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  styleUrls: ['./login.component.css']  
 })
 export class LoginComponent implements OnInit {
 
@@ -15,8 +15,8 @@ export class LoginComponent implements OnInit {
   usuario: Usuario;
 
   constructor(private loginService: LoginService) {
-    this.usuario = new Usuario("", "");
-   }
+    this.usuario = new Usuario("", "");    
+  }
 
   ngOnInit() {
   }

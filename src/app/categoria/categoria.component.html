@@ -1,0 +1,41 @@
+<!-- Dropdown Structure -->
+<ul id="dropdown1" class="dropdown-content">
+  <li><a href="#!">one</a></li>
+  <li><a href="#!">two</a></li>
+  <li class="divider"></li>
+  <li><a href="#!">three</a></li>
+</ul>
+<nav>
+  <div class="nav-wrapper">
+    <a href="#!" class="brand-logo">Logo</a>
+    <ul class="right hide-on-med-and-down">
+      <li><a [class.active]="aba == 'categoria'" (click)="aba = 'categoria'">Categoria</a></li>      
+      <!-- Dropdown Trigger -->
+      <li><a class="dropdown-trigger" [class.active]="aba == 'home'" (click)="aba = 'home'" href="#!" data-target="dropdown1">Dropdown<i class="material-icons right">arrow_drop_down</i></a></li>
+    </ul>
+  </div>
+</nav>
+
+<div [ngSwitch]="aba">
+  
+    <div class="container" *ngSwitchCase="'categoria'">
+        <h5>Cadastro de categoria</h5>
+        <form>
+          <div class="form-group">
+            <label for="name">Descrição da categoria</label>
+            <input type="text" class="form-control" id="descricao" [(ngModel)]="texto" required> 
+            Valor digitado: {{ texto }}
+          </div>
+    
+          <div class="form-group">
+            <label><input name="status" type="radio" value="S">Ativo</label>
+            <label><input name="status" type="radio" value="N">Inativo</label>
+          </div>     
+    
+          <button type="submit" class="btn btn-success" (click)="salvarCategoria()">Salvar</button>
+    
+        </form>
+
+    </div>
+  
+</div>

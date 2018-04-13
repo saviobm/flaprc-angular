@@ -2,6 +2,8 @@ package com.flaprc.modelo;
 
 import java.io.Serializable;
 
+import br.com.flaprc.entidades.FlapRCEntidade;
+
 
 /**
  * Entidade responsável pelo espelho da tabela do banco de dados.

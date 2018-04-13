@@ -9,8 +9,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.flaprc.modelo.FlapRCEntidade;
 import com.flaprc.modelo.Usuario;
+
+import br.com.flaprc.entidades.FlapRCEntidade;
 
 @CrossOrigin(origins = "http://localhost:4200")
 @RestController
@@ -24,7 +25,7 @@ public class LoginController {
 		if (usuario.getLogin().equalsIgnoreCase("saviobm")) {
 			
 			FlapRCEntidade entidade = new FlapRCEntidade();
-			entidade.setKeyMessageError("error.login");
+			//entidade.setKeyMessageError("error.login");
 			
 			ResponseEntity<FlapRCEntidade> entity = new ResponseEntity<FlapRCEntidade>(entidade, HttpStatus.BAD_REQUEST);
 			

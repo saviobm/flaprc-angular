@@ -13,12 +13,20 @@ import { TranslateModule, TranslateLoader, TranslateService } from '@ngx-transla
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpLoaderFactory } from './funcoes/HttpLoaderFactory';
 import { LoginService } from './login/login.service';
+import { CategoriaComponent } from './categoria/categoria.component';
+import { FormsModule } from '@angular/forms';
+import { ManterCategoriaComponent } from './manter-categoria/manter-categoria.component';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
-    AppComponent  
-  ],
+    AppComponent,
+    CategoriaComponent,
+    ManterCategoriaComponent  
+  ],  
   imports: [    
+    FormsModule,
+    CommonModule,
     BrowserModule,
     LoginModule,
     UsuarioModule,

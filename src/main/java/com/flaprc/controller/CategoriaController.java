@@ -19,7 +19,7 @@ import br.com.flaprc.springboot.Categoria;
 public class CategoriaController {
 	
 	@Autowired
-	private FlapRCRepository flapRCRepository;
+	private FlapRCRepository<Categoria> flapRCRepository;
 	
 /*	@Autowired
     private DataSource dataSource;*/

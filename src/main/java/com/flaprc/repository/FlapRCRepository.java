@@ -2,8 +2,8 @@ package com.flaprc.repository;
 
 import org.springframework.data.repository.CrudRepository;
 
-import br.com.flaprc.springboot.Categoria;
+import br.com.flaprc.springboot.FlapRCEntidade;
 
-public interface FlapRCRepository extends CrudRepository<Categoria, Long> {
+public interface FlapRCRepository<T extends FlapRCEntidade> extends CrudRepository<T, Long> {
 
 }

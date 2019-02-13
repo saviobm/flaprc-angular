@@ -65,14 +65,14 @@ export class LoginService {
       console.log(objetoError.keyMessageError);
       
 
-      const swal = require('sweetalert2');
+      /*const swal = require('sweetalert2');
 
       swal({
         title: 'Error!',
         text: mensagemInterpolada,
         type: 'error',
         confirmButtonText: 'OK'
-      });
+      });*/
 
     }
  

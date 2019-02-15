@@ -1,7 +1,7 @@
 
 export class Categoria {
 
-    id: BigInteger;
+    id: number;
 
     descricao: string;
 
